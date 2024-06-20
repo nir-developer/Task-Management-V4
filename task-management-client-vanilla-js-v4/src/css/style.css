@@ -1,0 +1,234 @@
+*{
+    margin:0; 
+    padding:0; 
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: sans-serif;
+    font-size: 1.6rem;
+}
+
+
+
+
+.app{
+    display: flex;
+    background-color: #f7f7f7;
+    height:100vh;
+    flex-direction: column;
+    
+}
+
+.header{
+    background-color: #333;
+    color:#fff;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:1rem;
+
+
+    
+}
+
+.header__logo{
+    display: flex;
+    align-items: center;
+}
+
+
+.header__logo-image{
+    width: 4rem;
+    height: 4rem
+
+}
+
+
+.header__logo-title{
+    font-size: 1.5rem;
+    margin-left: 1rem;
+
+}
+
+
+.header__user{
+    display: flex;
+    align-items: center;
+
+}
+
+.header__user-photo{
+    height:4rem; 
+    width: 4rem;;
+    border-radius: 50%;
+    margin-right: 1rem;
+
+}
+
+/*I ADDED THIS*/
+.header__user-name{
+    margin-right: 1rem;    
+}
+
+.header__logout-btn{
+    background-color: #ff4757;
+    padding:0.5rem 1rem;
+    border: none;
+    color:#fff;
+    cursor: pointer;
+}
+
+
+
+/*MAIN
+    - flex-containercontains the list on the left and the task detail on the right
+    - flex-item :Let it grow vertically to occupy all the available space up to the bottom of the page
+
+*/
+.main{
+    flex:1; 
+    display: flex;
+
+}
+
+.main__sidebar{
+    width:30rem;
+    background-color: #f1f1f1;
+    padding:1rem;
+
+
+}
+
+/*IMPORTANT:
+    -  Flex Container  - with one element - the Add Task button 
+    -  Make it a flex container with justify-conteint: flex-end - to 
+*/
+.main__sidebar-header{
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+
+.main__add-task-btn{
+    background-color: #1e90ff;
+    border:none;
+    padding:0.5rem 1rem;
+    color: #fff;
+    cursor: pointer;
+
+}
+
+
+.main__task-list{
+   
+    list-style: none;
+   
+}
+
+/*HE ADDED THE SPACE ON EACH LI INSTEAD ON THE ENTIRE UL*/
+/* .main__task-list li{
+    padding:0.5rem;
+    margin-bottom: 0.5rem;;
+    background-color: #fff;
+    border:1px solid #ccc;
+    cursor: pointer;
+} */
+
+.main__task-item{
+     padding:0.5rem;
+    margin-bottom: 0.5rem;;
+    background-color: #fff;
+    border:1px solid #ccc;
+    cursor: pointer;
+}
+
+
+
+/*FLEX ITEM :
+    - Contains a single item (main__task-detail box)
+    - RIGHT CHILD OF THE MAIN CONTAINER-  SIDE WILL OCCUPY ALL THE AVAIALBE SPACE TO THE RIGHT OF THE ASIDE BAR*/
+.main__content{
+    flex:1; 
+    padding:1rem;
+}
+
+
+/*NOTE: 
+    This is the single child of the main__content 
+    - Make it occupy at least 200px height
+
+*/
+.main__task-detail{
+  
+    min-height: 20rem;
+    border: 1px solid #ccc;
+    padding:1rem;
+    background-color: #fff;
+
+}
+
+
+/*MODAL 
+    - INITIALLY DISPLAY:NONE - WITH JS LATER - WILL BE SET TO FLEX CONTAINER WITH IT'S CONTENT CENTERED VERTICAL AND HORIZANTALLY
+    - WHEN SET THE position: fixed WITHOUT ANY THING ELSE -  - the modal dissapear!!! WHY?
+    - AS SOON AS ADDING THE TOP:LEFT - IT APPEARED AGAIN
+
+
+*/
+
+.modal{
+    background-color: rgba(0 , 0 , 0, 0.5);
+    position: fixed; 
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+
+
+}
+
+.modal__content{
+    padding:2rem;
+}
+
+.modal__form{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.modal__form h2{
+    margin-bottom: 1rem;;
+}
+
+/*NOTE THERE IS A V.H - SINCE TOTAL SPACE BETWEEN THE INPUTS AND THE TITLE IS 1.5REM! not 1 rem*/
+
+.modal__form input{
+    padding:0.5rem; 
+    margin-bottom: 1rem;
+    border:1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+.modal__form button {
+    padding:0.5rem;
+    background-color: #1e90ff;
+    border:none;
+    color:#fff; 
+    cursor: pointer;
+}
+
+
+

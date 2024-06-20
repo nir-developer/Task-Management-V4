@@ -1,0 +1,98 @@
+
+LATER - CHECK  FOR THE renderTasks function: 
+    IF IT'S BETTER TO USE EVENT DELEGATION!!
+
+
+
+
+
+
+CSS 
+
+************************************************
+        JS 
+*********************************************
+
+1. State: (LATER CHECK WITH IMMUTABLE!)
+
+    const state = {
+        user:null, 
+        tasks:[], 
+        selectedTask: null
+
+    }
+
+
+************************************************8
+        2.RENDERING FUNCTIONS
+******************************************************
+
+    - task-detail: (MAIN)
+        - On the original HTML page - with no content 
+        - Content will be creating in JS - renderTaskDetail() - with the values o state.selectedTask
+
+    - task-list: (UL)
+        - On the original page - with no content 
+        - Content will be creating in JS - renderTasks() - with the values o state.selectedTask
+        
+
+    
+    
+    - task-list-item (LI)
+        - Not on the original page ! But created on the renderTasks function on the fly 
+
+        
+
+
+
+
+
+--------------------------------------------
+        2.1 render() : 
+---------------------------------------------
+    if user is truety - then -   
+            -Display user photo
+            -Display user name
+            -Display Logout button  ?!!?
+            -Hide the Auth Modal 
+
+    Else: 
+            - Hide the user photo 
+            - Hide User name
+            - Display the Auth Modal 
+
+
+    
+----------------------------------------------------
+        2.2  renderTasks
+------------------------------------------------------
+
+    - For each task in the state.tasks array : 
+        - Create a new <li> HTML element: 
+            - Set it's text content to task.title 
+            - Style it by adding the  main__task-item class to the classList 
+            - Attach an event Listener to the li that is triggered on click event that dode sth folowoing
+                    - Update the state.selectedTask to the task 
+                    - render the taskDetail() 
+
+        - 
+
+
+
+
+
+--------------------------------------------
+        2.3 renderTaskDetail
+----------------------------------------------      
+
+
+
+
+
+
+        
+
+    
+
+
+

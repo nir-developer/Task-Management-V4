@@ -1,0 +1,47 @@
+
+
+TASK LIST 
+
+
+**************************************************************
+TASK MANAGEMENT - CRUD-  (WITHOUT AUTHENTICATION - AUTHORIZATION)
+********************************************************
+     
+   IMPORTANT: FOR NOW FAKE THE USER ID IN THE REQUEST -SET TO EXISTING USER 
+         Set the User in the Task Schema - hardcoding the User: 
+        User:{
+            type: mongoose.Schema.ObjectId, 
+            ref:'User',
+            required:[true, 'A task must belong to a user'],
+            //FAKE THE USER BEFORE IMPLEMENTING PROTECTED ROUTES FOR TASK MANAGEMENT
+            default:'6671314d7a0c5a3551e12f68'
+        },
+
+
+    CRUD: 
+        1.CREATE - WORK!
+
+        2.GET ALL TASKS - FOR THE GIVEN USER - OK! 
+
+        3.GET A SINGLE  TASK FOR THE GIVEN USER - DONE!! 
+
+        4.UPDATE A TASK  - DONE 
+
+        5.DONE 
+
+
+
+
+
+
+******************************************************
+AUTHENTICATION: 
+****************************************************
+
+   1. SIGNUP (WITH MULTER) - OK!!
+
+   2. LOGIN -DONE ! 
+
+AUTHORIZATION:
+
+   3. Protected Routes  - M.W

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management V4 | Vanilla JS</title>
+    <script src="src/js/app.js" type="module" ></script>
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+   <div class="app">
+    <header class="header">
+        <div class="header__logo">
+            <img src="src/img/logo-green-small.png" alt="Logo" class="header__logo-image">
+            <h1 class="header__logo-title">Task Manager</h1>
+        </div>
+        
+        <div class="header__user">
+            <img src="src/img/users/user-12.jpg" alt="User Photo" class="header__user-photo" id="user-photo">
+            <span class="header__user-name" id="user-name">SSS</span>
+            <button class="header__logout-btn" id="logout-btn">Logout</button>
+        </div>
+    </header>
+    <main class="main">
+        <div class="main__sidebar">
+            <div class="main__sidebar-header">
+                <button id="add-task-btn" class="main__add-task-btn">Add Task</button>
+            </div>
+            <ul id="task-list" class="main__task-list">
+                <!-- <li>TASK 1</li>
+                <li>TASK 2</li> -->
+            </ul>
+        </div>
+        <div class="main__content">
+            <div id="task-detail" class="main__task-detail">
+                <!--TASK DETAILS WILL BE DISPLAYED HERE(h2 for title , p for description and p for completed )-->
+                <!-- <h2>GYM</h2>
+                <p>Going to the gym</p>
+                <p>Completed</p>
+                <button id="update-task-btn">Update Task</button>
+                <button id="delete-task-btn">Delete Task</button> -->
+
+            </div>
+
+        </div>
+    </main>
+   </div>
+
+   <!--MODAL-->
+   <div class="modal" id="auth-modal">
+    <div class="modal__content">
+        <form class="modal__form" id="login-form">
+            <h2 class="Login">Login</h2>
+            <input type="email" id="login-email" placeholder="Email:" required>
+            <input type="password" id="login-password" placeholder="Password:" required>
+            <button type="submit">Login</button>
+        </form>
+          <form class="modal__form" id="signup-form">
+            <h2 class="Login">Signup</h2>
+            <input type="text" id="signup-name" placeholder="Name:" required>
+            <input type="email" id="signup-email" placeholder="Email:" required>
+            <input type="password" id="signup-password" placeholder="Password:" required>
+            <input type="password" id="signup-password-confirm" placeholder="Confirm Password" required>
+
+            
+            <button type="submit">Login</button>
+        </form>
+    </div>
+   </div>
+
+</body>
+</html>
